@@ -1,3 +1,7 @@
+# Note
+
+The file `public/sql/sample.sql` has been added for testing purposes. If something does not work on your end, you can use this SQL file to help troubleshoot or set up the database. (admin@test.com:password)
+
 # Job Test: Laravel Secure Login & User Dashboard (Practical Coding Test)
 
 ## Overview

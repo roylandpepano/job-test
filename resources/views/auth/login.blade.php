@@ -17,6 +17,11 @@
 <body class="min-h-screen bg-gradient-to-br from-white via-blue-50 to-indigo-100 flex flex-col justify-center items-center">
     <main class="w-full flex flex-col items-center justify-center flex-1 px-4">
         <div class="animate-fade-in bg-white/80 border border-gray-200 rounded-2xl shadow-xl p-8 md:p-12 flex flex-col items-center max-w-md w-full mt-16">
+            @if(session('error'))
+                <div class="w-full mb-4 p-3 rounded-lg bg-red-100 text-red-700 text-sm text-center border border-red-200">
+                    {{ session('error') }}
+                </div>
+            @endif
             <img src="{{ asset('images/logo.png') }}" alt="Logo" class="h-14 w-14 mb-4 rounded-xl shadow-sm bg-white/80">
             <h1 class="text-2xl md:text-3xl font-extrabold mb-2 text-gray-900 tracking-tight text-center">Login</h1>
             <form id="loginForm" action="{{ route('login.post') }}" method="POST" class="space-y-5 w-full" novalidate>

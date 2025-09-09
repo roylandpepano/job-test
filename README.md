@@ -36,12 +36,8 @@ cd job-test
 
 If you encounter database errors, add the following lines to your `.env` file:
 
-```
-
-DB_CHARSET=utf8mb4
-DB_COLLATION=utf8mb4_unicode_ci
-
-```
+`DB_CHARSET=utf8mb4`
+`DB_COLLATION=utf8mb4_unicode_ci`
 
 ```
 

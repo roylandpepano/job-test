@@ -1,8 +1,8 @@
-# Laravel Secure Login & User Dashboard (Practical Coding Test)
+# Job Test: Laravel Secure Login & User Dashboard (Practical Coding Test)
 
 ## Overview
 
-This project is a secure PHP-based Login and Registration System built with Laravel 10, featuring a user dashboard with full CRUD (Create, Read, Update, Delete) functionality. It demonstrates modern best practices, including:
+This project is a secure PHP-based Login and Registration System built with Laravel 12 featuring a user dashboard with full CRUD (Create, Read, Update, Delete) functionality. It demonstrates modern best practices, including:
 
 -   User authentication with sessions
 -   Secure database interaction using both Eloquent ORM and raw PDO with prepared statements
@@ -20,7 +20,6 @@ This project is a secure PHP-based Login and Registration System built with Lara
 -   **Security**: XSS protection, CSRF tokens, password hashing, and session timeout.
 -   **Validation**: Robust server-side validation and enhanced JavaScript client-side validation.
 -   **Error Handling**: Friendly error messages for validation and authentication issues.
--   **Bonus**: Password reset migration included (controller/view logic can be added).
 
 ## Setup Instructions
 
@@ -62,7 +61,7 @@ php artisan migrate
 ### 6. Serve the Application
 
 ```
-php artisan serve
+composer run dev
 ```
 
 Visit [http://localhost:8000](http://localhost:8000) in your browser.

@@ -19,6 +19,14 @@ Route::middleware([RedirectIfAuthenticated::class])->group(function () {
     Route::post('/register', [AuthController::class, 'register'])->name('register.post');
     Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
     Route::post('/login', [AuthController::class, 'login'])->name('login.post');
+
+    // Password reset request form
+    Route::get('/password/reset', function () {
+        return view('auth.passwords.email');
+    })->name('password.request');
+
+    // Handle password reset email sending (controller logic to be implemented)
+    Route::post('/password/email', [AuthController::class, 'sendResetLinkEmail'])->name('password.email');
 });
 
 // Protected routes group (simple custom auth)

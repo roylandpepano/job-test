@@ -18,27 +18,28 @@ This project is a secure PHP-based Login and Registration System built with Lara
 
 ## Features
 
--   **User Registration & Login**: Secure registration and login with session-based authentication.
--   **User Dashboard**: View, create, update, and delete user records (CRUD).
--   **PDO Integration**: All authentication and user CRUD operations are also implemented using raw PDO with prepared statements for demonstration.
--   **Security**: XSS protection, CSRF tokens, password hashing, and session timeout.
--   **Validation**: Robust server-side validation and enhanced JavaScript client-side validation.
--   **Error Handling**: Friendly error messages for validation and authentication issues.
+# Updates
+
+## Password Reset Feature
+
+A new page and logic code for password reset have been added to the project.
 
 ## Setup Instructions
 
 ### 1. Clone the Repository
 
-```
+```bash
 git clone https://github.com/yourusername/job-test.git
 cd job-test
-# Database Configuration
+```
+
+#### Database Configuration
 
 If you encounter database errors, add the following lines to your `.env` file:
 
-`DB_CHARSET=utf8mb4`
-`DB_COLLATION=utf8mb4_unicode_ci`
-
+```
+DB_CHARSET=utf8mb4
+DB_COLLATION=utf8mb4_unicode_ci
 ```
 
 ### 2. Install Dependencies

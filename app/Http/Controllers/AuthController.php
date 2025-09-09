@@ -79,8 +79,27 @@ class AuthController extends Controller
 
     public function logout(Request $request)
     {
-    // Session Management: Invalidate the session on logout
-    $request->session()->invalidate();
-    return redirect()->route('login')->with('success', 'You have been logged out.');
+        // Session Management: Invalidate the session on logout
+        $request->session()->invalidate();
+        return redirect()->route('login')->with('success', 'You have been logged out.');
+    }
+
+    /**
+     * Handle sending a password reset link to the given email address.
+     */
+    public function sendResetLinkEmail(Request $request)
+    {
+        $request->validate([
+            'email' => 'required|email|exists:users,email',
+        ]);
+
+        // Generate a token (for demo, use random string; in production, use a secure method and store in DB)
+        $token = bin2hex(random_bytes(32));
+
+        // Example reset link (would point to a reset form in a real app)
+        $resetLink = url('/password/reset/' . $token . '?email=' . urlencode($request->email));
+
+        // Simulate sending email by flashing the link to the session (for demo/testing)
+        return back()->with('status', 'A password reset link has been sent to your email. (Demo: ' . $resetLink . ')');
     }
 }

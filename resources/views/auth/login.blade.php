@@ -41,10 +41,13 @@
                 <button class="w-full bg-indigo-500 text-white py-2.5 rounded-lg font-semibold hover:bg-indigo-600 transition">
                     Sign in
                 </button>
-                <p class="text-sm text-center text-gray-500">
-                    Don’t have an account?
-                    <a href="{{ route('register') }}" class="text-indigo-600 hover:underline">Register</a>
-                </p>
+                <div class="flex flex-col items-center space-y-1">
+                    <p class="text-sm text-center text-gray-500">
+                        Don’t have an account?
+                        <a href="{{ route('register') }}" class="text-indigo-600 hover:underline">Register</a>
+                    </p>
+                    <a href="{{ route('password.request') }}" class="text-xs text-indigo-500 hover:underline mt-1">Forgot Password?</a>
+                </div>
             </form>
         </div>
     </main>

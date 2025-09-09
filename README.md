@@ -32,6 +32,17 @@ This project is a secure PHP-based Login and Registration System built with Lara
 ```
 git clone https://github.com/yourusername/job-test.git
 cd job-test
+# Database Configuration
+
+If you encounter database errors, add the following lines to your `.env` file:
+
+```
+
+DB_CHARSET=utf8mb4
+DB_COLLATION=utf8mb4_unicode_ci
+
+```
+
 ```
 
 ### 2. Install Dependencies

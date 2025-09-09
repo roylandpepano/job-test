@@ -93,10 +93,6 @@ php artisan schema:dump
 -   **Password Hashing**: Uses `password_hash`/`Hash::make` and `password_verify`/`Hash::check`.
 -   **Session Management**: Custom middleware for session timeout and secure handling.
 
-## Optional Enhancements
-
--   Password reset migration included (add controller/view for full feature).
-
 ## Author
 
--   [Your Name](https://github.com/roylandvp)
+-   [Royland](https://github.com/roylandvp)
